@@ -2,9 +2,7 @@
  * SPECTRUM — Core Application Controller
  */
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Modals & Systems
-  if (window.initJoinModal) window.initJoinModal();
-  if (window.initEventModal) window.initEventModal();
+  // 1. Initialize Lightbox
   if (window.initLightbox) window.initLightbox();
 
   // 2. Initialize Three.js 3D Object in Hero
@@ -57,13 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Render Homepage Interactive Domains
   renderInteractiveDomains();
 
-  // 6. Render Homepage Events
-  renderHomepageEvents();
-
-  // 7. Render Homepage Gallery Teaser
+  // 6. Render Homepage Gallery Teaser
   renderHomepageGallery();
 
-  // 8. Contact Form
+  // 7. Contact Form
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -123,7 +118,7 @@ function renderInteractiveDomains() {
             <h3 class="text-3xl font-display font-bold tracking-tight text-white mb-3">${d.name}</h3>
             <p class="text-neutral-300 text-sm leading-relaxed mb-6">${d.description}</p>
             
-            <div class="space-y-4 mb-6">
+            <div class="space-y-4 mb-2">
               <div class="text-xs font-mono text-neutral-400 uppercase tracking-wider font-semibold">Key Responsibilities</div>
               <ul class="space-y-2">
                 ${d.responsibilities.map(r => `
@@ -136,17 +131,12 @@ function renderInteractiveDomains() {
             </div>
           </div>
 
-          <div class="pt-6 border-t border-neutral-800">
-            <div class="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2 font-semibold">Toolkit & Stacks</div>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              ${d.tools.map(t => `
-                <span class="px-2.5 py-1 bg-neutral-800 rounded-md text-[11px] font-mono text-neutral-300 border border-neutral-700/60">${t}</span>
-              `).join('')}
-            </div>
-            <button onclick="openJoinModal('${d.name}')" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">
-              <span>Apply for ${d.name} Domain</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+          <div class="pt-6 border-t border-neutral-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-neutral-400">SRM IST RAMAPURAM</span>
+            <a href="./domains.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-400 hover:text-red-300 transition-colors">
+              <span>View domain overview</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
           </div>
         </div>
       `;
@@ -180,61 +170,6 @@ function renderInteractiveDomains() {
 
   window.selectDomain = updateActiveDomain;
   updateActiveDomain(0);
-}
-
-/**
- * Render Homepage Events
- */
-function renderHomepageEvents() {
-  const container = document.getElementById('featured-events-grid');
-  if (!container || typeof EVENTS_DATA === 'undefined') return;
-
-  const featured = EVENTS_DATA.slice(0, 4);
-
-  container.innerHTML = featured.map(e => `
-    <div class="hover-card bg-white border border-neutral-200/90 rounded-2xl overflow-hidden flex flex-col justify-between transition-all">
-      <div>
-        <div class="relative h-48 overflow-hidden bg-neutral-100">
-          <img src="${e.bannerImage}" alt="${e.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
-          <div class="absolute top-3 left-3 flex gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-neutral-900/90 backdrop-blur-md text-white font-mono text-[10px] font-bold tracking-wider uppercase border border-neutral-800">
-              ${e.type}
-            </span>
-            <span class="px-2.5 py-1 rounded-md bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase">
-              ${e.domain}
-            </span>
-          </div>
-        </div>
-
-        <div class="p-6">
-          <div class="text-xs font-mono text-neutral-400 mb-1.5">${e.date}</div>
-          <h3 class="text-xl font-bold tracking-tight text-neutral-900 mb-2">${e.title}</h3>
-          <p class="text-xs text-neutral-600 line-clamp-2 leading-relaxed mb-4">${e.description}</p>
-          
-          <div class="p-3 bg-neutral-50 rounded-lg border border-neutral-200/60 text-[11px] text-neutral-700 space-y-1">
-            <div class="flex items-center justify-between">
-              <span class="text-neutral-500">Venue</span>
-              <span class="font-medium text-neutral-900">${e.venue}</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-neutral-500">Perks</span>
-              <span class="font-medium text-red-600 truncate max-w-[180px]">${e.prizes}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="p-6 pt-0 border-t border-neutral-100 flex items-center gap-3">
-        <button onclick="openEventModal('${e.id}')" class="flex-1 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold rounded-lg transition-colors flex items-center justify-center gap-1.5">
-          <span>Register Now</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </button>
-        <button onclick="openEventModal('${e.id}')" class="p-2.5 border border-neutral-200 hover:border-neutral-900 text-neutral-700 hover:text-neutral-900 rounded-lg transition-colors" title="View Details">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-        </button>
-      </div>
-    </div>
-  `).join('');
 }
 
 /**

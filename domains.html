@@ -31,14 +31,13 @@
         <a href="./index.html" class="hover:text-neutral-900 transition-colors">Home</a>
         <a href="./about.html" class="hover:text-neutral-900 transition-colors">About</a>
         <a href="./domains.html" class="text-red-600 hover:text-red-700 transition-colors">Domains</a>
-        <a href="./events.html" class="hover:text-neutral-900 transition-colors">Events</a>
         <a href="./gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
         <a href="./contact.html" class="hover:text-neutral-900 transition-colors">Contact</a>
       </nav>
 
-      <button onclick="openJoinModal()" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all">
-        Join Spectrum
-      </button>
+      <a href="./contact.html" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all">
+        Contact Us
+      </a>
     </div>
   </header>
 
@@ -52,7 +51,7 @@
         Different Skills. One Spectrum<span class="text-red-600">.</span>
       </h1>
       <p class="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
-        Spectrum is orchestrated across six specialized domains. Whether your craft is code, design, live operations, business modeling, or cinematic production, you operate in a high-impact guild.
+        Spectrum is orchestrated across six specialized domains. Whether your craft is code, design, live operations, business modeling, or cinematic production, each domain operates as a high-impact guild.
       </p>
     </div>
 
@@ -64,12 +63,12 @@
     <!-- Bottom Action Banner -->
     <div class="mt-20 p-10 bg-neutral-950 text-white rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
-        <h3 class="text-2xl font-bold font-display">Ready to contribute your domain skills?</h3>
-        <p class="text-xs text-neutral-400 mt-1">Applications are reviewed on a rolling basis across all SRM departments.</p>
+        <h3 class="text-2xl font-bold font-display">Discover Collaboration Across All Domains</h3>
+        <p class="text-xs text-neutral-400 mt-1">Bringing multidisciplinary excellence to SRM Institute of Science and Technology, Ramapuram.</p>
       </div>
-      <button onclick="openJoinModal()" class="px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-xs transition-colors shrink-0">
-        Apply to Join Spectrum →
-      </button>
+      <a href="./contact.html" class="px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-xs transition-colors shrink-0">
+        Connect With Us →
+      </a>
     </div>
 
   </main>
@@ -86,11 +85,9 @@
   <script src="./js/config.js"></script>
   <script src="./js/domains-data.js"></script>
   <script src="./js/toast.js"></script>
-  <script src="./js/join-modal.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      initJoinModal();
       renderFullDomains();
     });
 
@@ -109,13 +106,6 @@
               </div>
               <h2 class="text-3xl font-display font-extrabold tracking-tight text-neutral-900">${d.name}</h2>
               <p class="text-sm text-neutral-600 leading-relaxed">${d.description}</p>
-              
-              <div class="pt-2">
-                <button onclick="openJoinModal('${d.name}')" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider transition-colors inline-flex items-center gap-2">
-                  <span>Apply for ${d.name} Guild</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </button>
-              </div>
             </div>
 
             <div class="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl border border-neutral-200/80 space-y-6">
@@ -129,15 +119,6 @@
                     </li>
                   `).join('')}
                 </ul>
-              </div>
-
-              <div class="pt-4 border-t border-neutral-100">
-                <h4 class="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold mb-2">Preferred Software & Stack</h4>
-                <div class="flex flex-wrap gap-2">
-                  ${d.tools.map(t => `
-                    <span class="px-3 py-1 bg-neutral-100 text-neutral-800 text-xs font-mono rounded-md border border-neutral-200/60">${t}</span>
-                  `).join('')}
-                </div>
               </div>
             </div>
 

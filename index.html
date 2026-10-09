@@ -72,17 +72,16 @@
         <a href="./index.html" class="text-red-600 hover:text-red-700 transition-colors">Home</a>
         <a href="./about.html" class="hover:text-neutral-900 transition-colors">About</a>
         <a href="./domains.html" class="hover:text-neutral-900 transition-colors">Domains</a>
-        <a href="./events.html" class="hover:text-neutral-900 transition-colors">Events</a>
         <a href="./gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
         <a href="./contact.html" class="hover:text-neutral-900 transition-colors">Contact</a>
       </nav>
 
       <!-- Action Buttons -->
       <div class="hidden sm:flex items-center gap-3">
-        <button onclick="openJoinModal()" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow flex items-center gap-2 group">
-          <span>Join Spectrum</span>
+        <a href="./contact.html" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow flex items-center gap-2 group">
+          <span>Contact Us</span>
           <span class="w-1.5 h-1.5 rounded-full bg-red-500 group-hover:scale-125 transition-transform"></span>
-        </button>
+        </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -112,16 +111,15 @@
         <a href="./index.html" class="mobile-nav-link text-white hover:text-red-500 transition-colors">01. Home</a>
         <a href="./about.html" class="mobile-nav-link hover:text-red-500 transition-colors">02. About Spectrum</a>
         <a href="./domains.html" class="mobile-nav-link hover:text-red-500 transition-colors">03. The 6 Domains</a>
-        <a href="./events.html" class="mobile-nav-link hover:text-red-500 transition-colors">04. Campus Events</a>
-        <a href="./gallery.html" class="mobile-nav-link hover:text-red-500 transition-colors">05. Moments & Archive</a>
-        <a href="./contact.html" class="mobile-nav-link hover:text-red-500 transition-colors">06. Connect & Location</a>
+        <a href="./gallery.html" class="mobile-nav-link hover:text-red-500 transition-colors">04. Moments & Archive</a>
+        <a href="./contact.html" class="mobile-nav-link hover:text-red-500 transition-colors">05. Connect & Location</a>
       </nav>
     </div>
 
     <div class="pt-6 border-t border-neutral-800 space-y-3">
-      <button onclick="openJoinModal()" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-sm text-center">
-        Join Spectrum Community
-      </button>
+      <a href="./contact.html" class="block w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-sm text-center">
+        Contact Spectrum
+      </a>
       <div class="text-center text-xs font-mono text-neutral-500">
         SRM Institute of Science and Technology · Ramapuram
       </div>
@@ -172,8 +170,8 @@
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
             
-            <a href="./events.html" class="px-7 py-3.5 bg-neutral-100 hover:bg-neutral-200 border border-neutral-300 text-neutral-900 font-semibold rounded-lg text-sm transition-colors flex items-center gap-2">
-              <span>Explore Events</span>
+            <a href="./domains.html" class="px-7 py-3.5 bg-neutral-100 hover:bg-neutral-200 border border-neutral-300 text-neutral-900 font-semibold rounded-lg text-sm transition-colors flex items-center gap-2">
+              <span>Discover Domains</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
           </div>
@@ -302,9 +300,7 @@
 
           <div class="relative z-10 pt-6 border-t border-neutral-800 flex items-center justify-between text-xs font-mono text-neutral-400">
             <span>PROTOTYPE · SHIP · DEMO</span>
-            <a href="./events.html" class="text-red-400 hover:text-red-300 flex items-center gap-1 font-semibold">
-              Browse Hackathons →
-            </a>
+            <span class="text-neutral-500 font-semibold">24-36H Sprint Formats</span>
           </div>
         </div>
 
@@ -395,34 +391,6 @@
   </section>
 
 
-  <!-- ========================================== -->
-  <!-- 8. EVENTS SECTION ("What's Happening")    -->
-  <!-- ========================================== -->
-  <section class="py-24 bg-white border-t border-neutral-200/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-        <div>
-          <div class="text-xs font-mono font-bold tracking-widest text-red-600 uppercase mb-2">Live Timeline</div>
-          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-neutral-900">
-            What's Happening at Spectrum
-          </h2>
-          <p class="text-xs sm:text-sm text-neutral-500 mt-1">Explore sample upcoming events and register for free student entry.</p>
-        </div>
-        
-        <a href="./events.html" class="inline-flex items-center gap-2 text-xs font-bold text-neutral-900 hover:text-red-600 uppercase tracking-wider transition-colors">
-          <span>View All Events Archive</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-      </div>
-
-      <!-- Events Cards Grid (Injected via js/main.js) -->
-      <div id="featured-events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Rendered dynamically -->
-      </div>
-
-    </div>
-  </section>
 
 
   <!-- ========================================== -->
@@ -599,13 +567,13 @@
           </p>
 
           <div class="pt-4 flex flex-wrap items-center gap-4">
-            <button onclick="openJoinModal()" class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-sm transition-all shadow-xl shadow-red-600/30 hover:shadow-red-600/40 flex items-center gap-2">
-              <span>Join Spectrum</span>
+            <a href="./contact.html" class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-sm transition-all shadow-xl shadow-red-600/30 hover:shadow-red-600/40 flex items-center gap-2">
+              <span>Connect With Us</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+            </a>
 
-            <a href="./events.html" class="px-8 py-4 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white font-semibold rounded-xl text-sm transition-colors">
-              Explore Our Events
+            <a href="./domains.html" class="px-8 py-4 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white font-semibold rounded-xl text-sm transition-colors">
+              Explore The 6 Domains
             </a>
           </div>
         </div>
@@ -742,7 +710,6 @@
             <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
             <li><a href="./about.html" class="hover:text-white transition-colors">About Spectrum</a></li>
             <li><a href="./domains.html" class="hover:text-white transition-colors">6 Operating Domains</a></li>
-            <li><a href="./events.html" class="hover:text-white transition-colors">Events & Hackathons</a></li>
             <li><a href="./gallery.html" class="hover:text-white transition-colors">Moments & Gallery</a></li>
             <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Hub</a></li>
           </ul>
@@ -779,14 +746,11 @@
     </div>
   </footer>
 
-  <!-- Application & Event Logic Scripts -->
+  <!-- Application Logic Scripts -->
   <script src="./js/config.js"></script>
   <script src="./js/domains-data.js"></script>
-  <script src="./js/events-data.js"></script>
   <script src="./js/gallery-data.js"></script>
   <script src="./js/toast.js"></script>
-  <script src="./js/join-modal.js"></script>
-  <script src="./js/event-modal.js"></script>
   <script src="./js/lightbox.js"></script>
   <script src="./js/three-spectrum.js"></script>
   <script src="./js/main.js"></script>

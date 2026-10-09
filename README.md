@@ -49,19 +49,15 @@ spectrum-srm/
 ├── index.html                   # Flagship interactive homepage with 3D canvas
 ├── about.html                   # Deep dive into club manifesto & ethos
 ├── domains.html                 # Comprehensive 6-domain breakdown
-├── events.html                  # Full events exploration & RSVP pass generation
 ├── gallery.html                 # Visual archive with masonry layout & Lightbox
 ├── contact.html                 # Contact hub, campus coordinates & FAQ
 ├── css/
 │   └── styles.css               # Design system, typography, hairline borders, glow
 └── js/
     ├── config.js                # Centralized site settings & official links
-    ├── domains-data.js          # Domain definitions, tools, and responsibilities
-    ├── events-data.js           # Sample events (Hackathons, Workshops, Sprints)
+    ├── domains-data.js          # Domain definitions, badge, and responsibilities
     ├── gallery-data.js          # Visual archive images, categories, and captions
     ├── three-spectrum.js        # Three.js 3D WebGL Spectrum Prism object
-    ├── join-modal.js            # Multi-step recruitment application modal
-    ├── event-modal.js           # Event details modal & digital pass generator
     ├── lightbox.js              # Fullscreen image viewer with keyboard navigation
     ├── toast.js                 # Toast alert system
     └── main.js                  # Navbar blur, mobile drawer, interactive tab controllers
@@ -70,8 +66,7 @@ spectrum-srm/
 ---
 
 ## 🔄 Replacing Placeholder Assets
-- **Logo**: The temporary mark is located in the navbar and footer. Replace with the official SVG in `index.html`, `events.html`, etc.
-- **Events**: Modify `js/events-data.js` to add, update, or remove live events.
+- **Logo**: The temporary mark is located in the navbar and footer. Replace with the official SVG in HTML pages.
 - **Gallery**: Update `js/gallery-data.js` with your official campus photos.
 - **Socials & Contacts**: Edit `js/config.js` to update emails, campus addresses, and social handles.
 
