@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domains — SPECTRUM | SRM Ramapuram</title>
+  <meta name="description" content="Explore the 6 operating domains of SPECTRUM at SRM Institute of Science and Technology, Ramapuram: Creative, PR, Operations, Technical, Business, and Capture.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,85 10,85' fill='none' stroke='%23E11D48' stroke-width='8'/><circle cx='50' cy='55' r='14' fill='%2309090B'/></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-white text-neutral-900 selection:bg-rose-100 selection:text-red-600 antialiased">
+
+  <!-- Navigation -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8 bg-white/80 backdrop-blur-md border-b border-neutral-200/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <svg viewBox="0 0 100 100" class="w-8 h-8">
+          <polygon points="50,12 88,82 12,82" fill="none" stroke="#E11D48" stroke-width="8" stroke-linejoin="round"/>
+          <polygon points="50,28 76,76 24,76" fill="#09090B" opacity="0.9"/>
+          <circle cx="50" cy="56" r="6" fill="#E11D48"/>
+        </svg>
+        <div>
+          <span class="font-display text-xl font-bold tracking-tight text-neutral-900">SPECTRUM</span>
+          <span class="block text-[10px] font-mono tracking-widest text-neutral-400 uppercase -mt-1">SRM RAMAPURAM</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-neutral-600">
+        <a href="./index.html" class="hover:text-neutral-900 transition-colors">Home</a>
+        <a href="./about.html" class="hover:text-neutral-900 transition-colors">About</a>
+        <a href="./domains.html" class="text-red-600 hover:text-red-700 transition-colors">Domains</a>
+        <a href="./events.html" class="hover:text-neutral-900 transition-colors">Events</a>
+        <a href="./gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
+        <a href="./contact.html" class="hover:text-neutral-900 transition-colors">Contact</a>
+      </nav>
+
+      <button onclick="openJoinModal()" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all">
+        Join Spectrum
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <main class="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="max-w-3xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+        <span>Organizational Framework</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-neutral-900">
+        Different Skills. One Spectrum<span class="text-red-600">.</span>
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
+        Spectrum is orchestrated across six specialized domains. Whether your craft is code, design, live operations, business modeling, or cinematic production, you operate in a high-impact guild.
+      </p>
+    </div>
+
+    <!-- 6 Domains Detailed Cards Grid -->
+    <div id="domains-full-grid" class="space-y-12">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Bottom Action Banner -->
+    <div class="mt-20 p-10 bg-neutral-950 text-white rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-bold font-display">Ready to contribute your domain skills?</h3>
+        <p class="text-xs text-neutral-400 mt-1">Applications are reviewed on a rolling basis across all SRM departments.</p>
+      </div>
+      <button onclick="openJoinModal()" class="px-7 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-xs transition-colors shrink-0">
+        Apply to Join Spectrum →
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 text-white border-t border-neutral-800 py-12 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-neutral-500 gap-4">
+      <div>SPECTRUM · SRM Institute of Science and Technology, Ramapuram</div>
+      <div>© 2026 Spectrum. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/domains-data.js"></script>
+  <script src="./js/toast.js"></script>
+  <script src="./js/join-modal.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initJoinModal();
+      renderFullDomains();
+    });
+
+    function renderFullDomains() {
+      const container = document.getElementById('domains-full-grid');
+      if (!container || typeof DOMAINS_DATA === 'undefined') return;
+
+      container.innerHTML = DOMAINS_DATA.map((d, idx) => `
+        <div class="p-8 md:p-10 bg-neutral-50 border border-neutral-200 rounded-3xl relative overflow-hidden transition-all hover:border-neutral-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-5 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono font-bold text-red-600">0${idx + 1} / DOMAIN</span>
+                <span class="px-2.5 py-0.5 rounded bg-neutral-200 text-neutral-800 font-mono text-[10px] font-bold uppercase tracking-wider">${d.badge}</span>
+              </div>
+              <h2 class="text-3xl font-display font-extrabold tracking-tight text-neutral-900">${d.name}</h2>
+              <p class="text-sm text-neutral-600 leading-relaxed">${d.description}</p>
+              
+              <div class="pt-2">
+                <button onclick="openJoinModal('${d.name}')" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider transition-colors inline-flex items-center gap-2">
+                  <span>Apply for ${d.name} Guild</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl border border-neutral-200/80 space-y-6">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold mb-3">Key Focus & Responsibilities</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  ${d.responsibilities.map(r => `
+                    <li class="flex items-start gap-2 text-xs text-neutral-700">
+                      <span class="text-red-600 font-bold mt-0.5">•</span>
+                      <span>${r}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-neutral-100">
+                <h4 class="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold mb-2">Preferred Software & Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  ${d.tools.map(t => `
+                    <span class="px-3 py-1 bg-neutral-100 text-neutral-800 text-xs font-mono rounded-md border border-neutral-200/60">${t}</span>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

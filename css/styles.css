@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --primary-red: #E11D48;
+  --primary-red-hover: #BE123C;
+  --primary-red-light: rgba(225, 29, 72, 0.08);
+  --bg-primary: #FFFFFF;
+  --bg-subtle: #FAFAFA;
+  --text-main: #09090B;
+  --text-muted: #71717A;
+  --border-light: #E4E4E7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Subtle architectural dot grid */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Red glow effect */
+.red-glow {
+  box-shadow: 0 0 40px -10px rgba(225, 29, 72, 0.35);
+}
+
+.red-glow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(225, 29, 72, 0.12);
+}
+
+/* Hairline borders */
+.border-hairline {
+  border-width: 1px;
+  border-color: rgba(228, 228, 231, 0.8);
+}
+
+/* Navbar blur transitions */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(228, 228, 231, 0.9);
+  padding-top: 0.65rem !important;
+  padding-bottom: 0.65rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Card hover transitions */
+.hover-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(225, 29, 72, 0.4);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.06), 0 4px 12px -2px rgba(225, 29, 72, 0.08);
+}
+
+/* Typographic Domain selector hover */
+.domain-row {
+  transition: all 0.2s ease-out;
+}
+.domain-row:hover {
+  background-color: #FAFAFA;
+  padding-left: 1.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #FFE4E6;
+  color: #E11D48;
+}
+
+/* Masonry Columns */
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+  }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}

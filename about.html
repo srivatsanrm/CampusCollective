@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — SPECTRUM | SRM Ramapuram</title>
+  <meta name="description" content="Discover the philosophy, ethos, and leadership structure behind SPECTRUM, SRM Institute of Science and Technology, Ramapuram.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,85 10,85' fill='none' stroke='%23E11D48' stroke-width='8'/><circle cx='50' cy='55' r='14' fill='%2309090B'/></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-white text-neutral-900 selection:bg-rose-100 selection:text-red-600 antialiased">
+
+  <!-- Navigation -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8 bg-white/80 backdrop-blur-md border-b border-neutral-200/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <svg viewBox="0 0 100 100" class="w-8 h-8">
+          <polygon points="50,12 88,82 12,82" fill="none" stroke="#E11D48" stroke-width="8" stroke-linejoin="round"/>
+          <polygon points="50,28 76,76 24,76" fill="#09090B" opacity="0.9"/>
+          <circle cx="50" cy="56" r="6" fill="#E11D48"/>
+        </svg>
+        <div>
+          <span class="font-display text-xl font-bold tracking-tight text-neutral-900">SPECTRUM</span>
+          <span class="block text-[10px] font-mono tracking-widest text-neutral-400 uppercase -mt-1">SRM RAMAPURAM</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-neutral-600">
+        <a href="./index.html" class="hover:text-neutral-900 transition-colors">Home</a>
+        <a href="./about.html" class="text-red-600 hover:text-red-700 transition-colors">About</a>
+        <a href="./domains.html" class="hover:text-neutral-900 transition-colors">Domains</a>
+        <a href="./events.html" class="hover:text-neutral-900 transition-colors">Events</a>
+        <a href="./gallery.html" class="hover:text-neutral-900 transition-colors">Gallery</a>
+        <a href="./contact.html" class="hover:text-neutral-900 transition-colors">Contact</a>
+      </nav>
+
+      <button onclick="openJoinModal()" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-all">
+        Join Spectrum
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <main class="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="max-w-3xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-mono font-semibold uppercase tracking-wider mb-3">
+        <span>About Our Community</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-neutral-900 leading-tight">
+        More Than a Club.<br>
+        <span class="text-neutral-500">A Spectrum of Ideas.</span>
+      </h1>
+      <p class="mt-6 text-base sm:text-lg text-neutral-700 leading-relaxed">
+        Spectrum was created to disrupt the siloed culture of traditional student clubs. We believe breakthrough ideas do not happen in isolation — they ignite when engineers, designers, strategists, organizers, and storytellers converge in a shared creative arena.
+      </p>
+    </div>
+
+    <!-- Editorial Story Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+      <div class="lg:col-span-6 space-y-6 text-sm text-neutral-600 leading-relaxed">
+        <h2 class="text-2xl font-display font-bold text-neutral-900">A New Standard for Student Initiatives</h2>
+        <p>
+          Founded at SRM Institute of Science and Technology, Ramapuram Campus, Spectrum operates as a professional-grade incubator for student innovation and event execution. We reject the notion of basic, generic college committees. Every hackathon we run, every workshop we teach, and every digital product we ship is designed to match the quality of modern technology startups and creative agencies.
+        </p>
+        <p>
+          Our members don't just attend lectures — they build platforms, secure corporate sponsorships, film cinematic documentaries, manage auditorium acoustics, prototype user interfaces in Figma, and deploy scalable cloud software.
+        </p>
+      </div>
+
+      <div class="lg:col-span-6 bg-neutral-950 text-white p-8 md:p-10 rounded-3xl relative overflow-hidden">
+        <div class="text-xs font-mono text-red-500 font-bold uppercase mb-2">Institutional Context</div>
+        <h3 class="text-2xl font-display font-bold text-white mb-3">SRM Institute of Science & Technology</h3>
+        <p class="text-xs text-neutral-300 leading-relaxed mb-6">
+          Based at the vibrant Ramapuram Campus in Chennai, Tamil Nadu, Spectrum draws talent across diverse academic schools — from Computer Science and AI to Mechanical Engineering, Management, and Visual Arts.
+        </p>
+        
+        <div class="pt-6 border-t border-neutral-800 grid grid-cols-2 gap-4 text-xs font-mono">
+          <div>
+            <div class="text-neutral-500">CAMPUS</div>
+            <div class="text-white font-semibold mt-0.5">Ramapuram, Chennai</div>
+          </div>
+          <div>
+            <div class="text-neutral-500">NATURE</div>
+            <div class="text-white font-semibold mt-0.5">Multidisciplinary</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 Pillars Manifesto -->
+    <div class="pt-12 border-t border-neutral-200">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold tracking-tight text-neutral-900 mb-8">
+        The Principles We Live By
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-neutral-50 rounded-2xl border border-neutral-200/80">
+          <span class="text-xs font-mono text-red-600 font-bold">01</span>
+          <h3 class="font-bold text-lg text-neutral-900 mt-2 mb-1">Execution Over Talk</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">We value tangible output — working code, staged events, and shipped assets — over endless slide decks.</p>
+        </div>
+
+        <div class="p-6 bg-neutral-50 rounded-2xl border border-neutral-200/80">
+          <span class="text-xs font-mono text-red-600 font-bold">02</span>
+          <h3 class="font-bold text-lg text-neutral-900 mt-2 mb-1">Radical Cross-Discipline</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">We break academic silos. Designers brainstorm with developers; business leads coordinate with stage directors.</p>
+        </div>
+
+        <div class="p-6 bg-neutral-50 rounded-2xl border border-neutral-200/80">
+          <span class="text-xs font-mono text-red-600 font-bold">03</span>
+          <h3 class="font-bold text-lg text-neutral-900 mt-2 mb-1">Professional Calibre</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">We hold our visual identity, operational execution, and code standards to top-tier commercial standards.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 text-white border-t border-neutral-800 py-12 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-neutral-500 gap-4">
+      <div>SPECTRUM · SRM Institute of Science and Technology, Ramapuram</div>
+      <div>© 2026 Spectrum. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/toast.js"></script>
+  <script src="./js/join-modal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initJoinModal();
+    });
+  </script>
+</body>
+</html>
