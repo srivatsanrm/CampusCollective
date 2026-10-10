@@ -1,14 +1,14 @@
 /**
- * SPECTRUM — Core Application Controller
+ * CAMPUS COLLECTIVE — Core Application Controller
  */
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Lightbox
   if (window.initLightbox) window.initLightbox();
 
   // 2. Initialize Three.js 3D Object in Hero
-  const canvasContainer = document.getElementById('spectrum-3d-container');
-  if (canvasContainer && window.initSpectrum3D) {
-    window.initSpectrum3D('spectrum-3d-container');
+  const canvasContainer = document.getElementById('hero-3d-container');
+  if (canvasContainer && window.initHero3D) {
+    window.initHero3D('hero-3d-container');
   }
 
   // 3. Navbar Sticky & Blur Effect
@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       contactForm.reset();
       if (window.showToast) {
-        window.showToast("Your message has been sent to Spectrum leads. We'll get back to you shortly!", "success");
+        window.showToast("Your message has been sent to our team. We'll get back to you shortly!", "success");
       }
     });
   }
 });
 
 /**
- * Render Interactive Domains ("Different Skills. One Spectrum.")
+ * Render Interactive Domains ("Different Skills. One Collective.")
  */
 function renderInteractiveDomains() {
   const container = document.getElementById('domains-interactive-container');
@@ -132,7 +132,7 @@ function renderInteractiveDomains() {
           </div>
 
           <div class="pt-6 border-t border-neutral-800 flex items-center justify-between">
-            <span class="text-xs font-mono text-neutral-400">SRM IST RAMAPURAM</span>
+            <span class="text-xs font-mono text-neutral-400">STUDENT COLLECTIVE</span>
             <a href="./domains.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-400 hover:text-red-300 transition-colors">
               <span>View domain overview</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

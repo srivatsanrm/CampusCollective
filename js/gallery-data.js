@@ -1,5 +1,5 @@
 /**
- * SPECTRUM — Gallery Data
+ * CAMPUS COLLECTIVE — Gallery Data
  * Centralized archive of event photographs, club moments, and behind-the-scenes.
  * All image URLs can be replaced with official club photographs easily.
  */
@@ -30,7 +30,7 @@ const GALLERY_DATA = [
     id: "gal-3",
     title: "Auditorium Keynote & Orientation",
     category: "Campus Events",
-    caption: "Welcoming incoming students to the Spectrum community inside SRM Ramapuram's Main Auditorium.",
+    caption: "Welcoming incoming students to the collective inside the Main Auditorium.",
     date: "Community Launch",
     domain: "OPERATIONS",
     image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",

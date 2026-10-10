@@ -1,8 +1,8 @@
 /**
- * SPECTRUM — Interactive 3D WebGL Spectrum Prism
+ * CAMPUS COLLECTIVE — Interactive 3D WebGL Prismatic Gem
  * Minimalist, premium, mouse-reactive geometric 3D object.
  */
-function initSpectrum3D(containerId) {
+function initHero3D(containerId) {
   const container = document.getElementById(containerId);
   if (!container || typeof THREE === 'undefined') return;
 
@@ -44,7 +44,7 @@ function initSpectrum3D(containerId) {
   // 2. Crimson Accent Wireframe Cage
   const wireGeometry = new THREE.IcosahedronGeometry(1.41, 1);
   const wireMaterial = new THREE.MeshBasicMaterial({
-    color: 0xe11d48, // Spectrum Electric Red
+    color: 0xe11d48, // Crimson Accent Red
     wireframe: true,
     transparent: true,
     opacity: 0.35
@@ -64,7 +64,7 @@ function initSpectrum3D(containerId) {
   const innerMesh = new THREE.Mesh(innerGeometry, innerMaterial);
   mainGroup.add(innerMesh);
 
-  // 4. Subtle Orbital Spectrum Rings
+  // 4. Subtle Orbital Rings
   const ringMaterial = new THREE.LineBasicMaterial({
     color: 0x18181b,
     transparent: true,
@@ -102,7 +102,7 @@ function initSpectrum3D(containerId) {
   ring2.rotation.z = Math.PI / 5;
   mainGroup.add(ring2);
 
-  // 5. Floating Particles (Spectrum Energy Nodes)
+  // 5. Floating Particles (Energy Nodes)
   const particleCount = 45;
   const particleGeometry = new THREE.BufferGeometry();
   const particlePositions = new Float32Array(particleCount * 3);
@@ -218,4 +218,4 @@ function initSpectrum3D(containerId) {
   animate();
 }
 
-window.initSpectrum3D = initSpectrum3D;
+window.initHero3D = initHero3D;

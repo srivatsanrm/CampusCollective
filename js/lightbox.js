@@ -1,12 +1,12 @@
 /**
- * SPECTRUM — Fullscreen Gallery Lightbox
+ * CAMPUS COLLECTIVE — Fullscreen Gallery Lightbox
  */
 let currentLightboxIndex = 0;
 let currentGalleryList = [];
 
 function initLightbox() {
   const lightboxHTML = `
-  <div id="spectrum-lightbox" class="fixed inset-0 z-50 bg-neutral-950/95 backdrop-blur-xl flex flex-col justify-between p-4 md:p-8 opacity-0 pointer-events-none transition-all duration-300">
+  <div id="collective-lightbox" class="fixed inset-0 z-50 bg-neutral-950/95 backdrop-blur-xl flex flex-col justify-between p-4 md:p-8 opacity-0 pointer-events-none transition-all duration-300">
     <!-- Top Bar -->
     <div class="flex items-center justify-between text-white z-10">
       <div id="lightbox-counter" class="font-mono text-xs text-neutral-400">01 / 09</div>
@@ -45,13 +45,13 @@ function initLightbox() {
   </div>
   `;
 
-  if (!document.getElementById('spectrum-lightbox')) {
+  if (!document.getElementById('collective-lightbox')) {
     const div = document.createElement('div');
     div.innerHTML = lightboxHTML;
     document.body.appendChild(div.firstElementChild);
   }
 
-  const lightbox = document.getElementById('spectrum-lightbox');
+  const lightbox = document.getElementById('collective-lightbox');
   const closeBtn = document.getElementById('close-lightbox-btn');
   const prevBtn = document.getElementById('prev-lightbox-btn');
   const nextBtn = document.getElementById('next-lightbox-btn');
@@ -61,7 +61,7 @@ function initLightbox() {
   if (nextBtn) nextBtn.onclick = showNextLightbox;
 
   window.addEventListener('keydown', (e) => {
-    const lb = document.getElementById('spectrum-lightbox');
+    const lb = document.getElementById('collective-lightbox');
     if (!lb || lb.classList.contains('pointer-events-none')) return;
 
     if (e.key === 'Escape') closeLightbox();
@@ -75,7 +75,7 @@ function openLightbox(index, itemsList = null) {
   currentGalleryList = itemsList || GALLERY_DATA;
   currentLightboxIndex = index >= 0 && index < currentGalleryList.length ? index : 0;
 
-  const lightbox = document.getElementById('spectrum-lightbox');
+  const lightbox = document.getElementById('collective-lightbox');
   if (!lightbox) return;
 
   updateLightboxContent();
@@ -115,7 +115,7 @@ function showNextLightbox() {
 }
 
 function closeLightbox() {
-  const lightbox = document.getElementById('spectrum-lightbox');
+  const lightbox = document.getElementById('collective-lightbox');
   if (!lightbox) return;
 
   lightbox.classList.add('opacity-0', 'pointer-events-none');

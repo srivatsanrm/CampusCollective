@@ -1,5 +1,5 @@
 /**
- * SPECTRUM — Minimal Toast Notification System
+ * CAMPUS COLLECTIVE — Minimal Toast Notification System
  */
 function showToast(message, type = 'info') {
   let container = document.getElementById('toast-container');
